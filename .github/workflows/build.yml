@@ -17,7 +17,9 @@ jobs:
       with:
         xcode-version: latest
 
-    - name: Verify Project Structure
+    - name: Build and Archive App
       run: |
+        echo "Building R7X-Tolls for HAMA⚡️VIP..."
+        # کۆمایڵکردنی فایله نەیتیڤەکان
+        swiftc -parse-as-library main.swift AppDelegate.swift -o R7X-Tolls
         ls -la
-        echo "Files checked successfully for R7X-Tolls"
